@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "userId": "student001",
+      "email": "amina@example.com",
+      "firstName": "Amina",
+      "lastName": "Ngugi",
+      "role": "student",
+      "dateJoined": "2024-08-15T00:00:00",
+      "profile": {
+        "bio": "Lifelong learner passionate about African textiles and oral storytelling.",
+        "avatar": "",
+        "skills": ["storytelling", "writing"]
+      },
+      "isActive": true
+    },
+    {
+      "userId": "instructor001",
+      "email": "olufemi@example.com",
+      "firstName": "Olufemi",
+      "lastName": "Okonkwo",
+      "role": "instructor",
+      "dateJoined": "2023-11-02T00:00:00",
+      "profile": {
+        "bio": "Historian specializing in West African empires and culture.",
+        "avatar": "",
+        "skills": ["history", "video production", "curriculum design"]
+      },
+      "isActive": true
+    }
+  ],
+  "courses": [
+    {
+      "courseId": "course101",
+      "title": "Introduction to West African Empires",
+      "description": "Explore the rise and fall of Ghana, Mali, and Songhai Empires.",
+      "instructorId": "instructor001",
+      "category": "History",
+      "level": "beginner",
+      "duration": 10,
+      "price": 49.99,
+      "tags": ["africa", "empires", "history"],
+      "createdAt": "2024-10-01T00:00:00",
+      "updatedAt": "2024-10-05T00:00:00",
+      "isPublished": true
+    }
+  ],
+  "enrollments": [
+    {
+      "studentId": "student001",
+      "courseId": "course101",
+      "progress": 25,
+      "completed": false
+    }
+  ],
+  "lessons": [
+    {
+      "lessonId": "lesson001",
+      "courseId": "course101",
+      "title": "The Kingdom of Ghana",
+      "content": "A detailed exploration of Ghana's trading networks and political power.",
+      "duration": 45,
+      "order": 1
+    }
+  ]
+}
