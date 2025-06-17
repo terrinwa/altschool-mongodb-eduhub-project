@@ -1,0 +1,122 @@
+{
+    "users": {
+        "$jsonSchema": {
+            "bsonType": "object",
+            "required": [
+                "userId",
+                "email",
+                "firstName",
+                "lastName",
+                "role",
+                "dateJoined",
+                "isActive"
+            ],
+            "properties": {
+                "userId": {
+                    "bsonType": "string"
+                },
+                "email": {
+                    "bsonType": "string",
+                    "pattern": "^.+@.+\\..+$"
+                },
+                "firstName": {
+                    "bsonType": "string"
+                },
+                "lastName": {
+                    "bsonType": "string"
+                },
+                "role": {
+                    "enum": [
+                        "student",
+                        "instructor"
+                    ]
+                },
+                "dateJoined": {
+                    "bsonType": "date"
+                },
+                "profile": {
+                    "bsonType": "object",
+                    "properties": {
+                        "bio": {
+                            "bsonType": "string"
+                        },
+                        "avatar": {
+                            "bsonType": "string"
+                        },
+                        "skills": {
+                            "bsonType": "array",
+                            "items": {
+                                "bsonType": "string"
+                            }
+                        }
+                    }
+                },
+                "isActive": {
+                    "bsonType": "bool"
+                }
+            }
+        }
+    },
+    "courses": {
+        "$jsonSchema": {
+            "bsonType": "object",
+            "required": [
+                "courseId",
+                "title",
+                "instructorId",
+                "category",
+                "level",
+                "duration",
+                "price",
+                "createdAt",
+                "updatedAt",
+                "isPublished"
+            ],
+            "properties": {
+                "courseId": {
+                    "bsonType": "string"
+                },
+                "title": {
+                    "bsonType": "string"
+                },
+                "description": {
+                    "bsonType": "string"
+                },
+                "instructorId": {
+                    "bsonType": "string"
+                },
+                "category": {
+                    "bsonType": "string"
+                },
+                "level": {
+                    "enum": [
+                        "beginner",
+                        "intermediate",
+                        "advanced"
+                    ]
+                },
+                "duration": {
+                    "bsonType": "double"
+                },
+                "price": {
+                    "bsonType": "double"
+                },
+                "tags": {
+                    "bsonType": "array",
+                    "items": {
+                        "bsonType": "string"
+                    }
+                },
+                "createdAt": {
+                    "bsonType": "date"
+                },
+                "updatedAt": {
+                    "bsonType": "date"
+                },
+                "isPublished": {
+                    "bsonType": "bool"
+                }
+            }
+        }
+    }
+}
